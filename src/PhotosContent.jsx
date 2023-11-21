@@ -6,6 +6,7 @@ export function PhotosContent() {
 
   useEffect(() => {
     const fetchPhoto = async () => {
+      // console.log("fetch photo ran");
       try {
         const response = await axios.get("http://127.0.0.1:3000/apod.json");
         console.log(response.data);
@@ -20,10 +21,15 @@ export function PhotosContent() {
 
   return (
     <div>
-      <h1>{photo.title}</h1>
-      <p>{photo.date}</p>
-      <p>{photo.explanation}</p>
-      <img src={photo.hdurl} alt={photo.title} />
+      {Object.keys(photo).length > 0 && (
+        <>
+          <h1>{photo.title}</h1>
+          <p>{photo.date}</p>
+          <p>{photo.explanation}</p>
+          <img src={photo.hdurl} alt={photo.title} />
+        </>
+      )}
+      {Object.keys(photo).length === 0 && <h1>No data available!</h1>}
     </div>
   );
 }
