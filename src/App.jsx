@@ -1,11 +1,11 @@
 import { PhotosContent } from "./PhotosContent";
-import { PostsIndex } from "./PostsIndex";
+// import { PostsIndex } from "./PostsIndex";
 
 function App() {
   return (
     <div>
       <PhotosContent />
-      <PostsIndex />
+      {/* <PostsIndex /> */}
     </div>
   );
 }
