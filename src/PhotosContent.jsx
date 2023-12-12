@@ -1,5 +1,6 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
+import { PostsIndex } from "./PostsIndex";
 
 export function PhotosContent() {
   const [photo, setPhoto] = useState({});
@@ -27,6 +28,7 @@ export function PhotosContent() {
           <p>{photo.date}</p>
           <p>{photo.explanation}</p>
           <img src={photo.hdurl} alt={photo.title} />
+          <PostsIndex photoId={photo.id} />
         </>
       )}
       {Object.keys(photo).length === 0 && <h1>No data available!</h1>}
