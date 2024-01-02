@@ -31,7 +31,9 @@ export function PhotosContent() {
           <PostsIndex photoId={photo.id} />
         </>
       )}
-      {Object.keys(photo).length === 0 && <h1>No data available!</h1>}
+      {Object.keys(photo).length === 0 && (
+        <img id="servunav" src="src/assets/earth-moon.png" alt="Service Unavailable" />
+      )}
     </div>
   );
 }
