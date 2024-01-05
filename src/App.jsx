@@ -1,9 +1,14 @@
-import { PhotosContent } from "./PhotosContent";
+import { Header } from "./Header";
+import { Route, Routes } from "react-router-dom";
+import ApodRoute from "./routes/ApodRoute";
 
 function App() {
   return (
     <div>
-      <PhotosContent />
+      <Header />
+      <Routes>
+        <Route path="/apod" element={<ApodRoute />} />
+      </Routes>
     </div>
   );
 }

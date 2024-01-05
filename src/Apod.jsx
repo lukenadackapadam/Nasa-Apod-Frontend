@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { PostsIndex } from "./PostsIndex";
 
-export function PhotosContent() {
+export function Apod() {
   const [photo, setPhoto] = useState({});
 
   useEffect(() => {
