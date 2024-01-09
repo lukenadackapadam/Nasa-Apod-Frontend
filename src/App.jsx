@@ -1,10 +1,13 @@
-import { Header } from "./Header";
+// import { useState } from "react";
+import { Header } from "./components/Header";
 import { Route, Routes } from "react-router-dom";
 import ApodRoute from "./routes/ApodRoute";
 import LoginRoute from "./routes/LoginRoute";
 import SignupRoute from "./routes/SignupRoute";
 
 function App() {
+  // const [isLoggedIn, setIsLoggedIn] = useState(false);
+
   return (
     <div>
       <Header />

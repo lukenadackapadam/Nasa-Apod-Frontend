@@ -1,4 +1,4 @@
-import { Apod } from "../Apod";
+import { Apod } from "../components/Apod";
 
 const ApodRoute = () => {
   return (
