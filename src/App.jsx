@@ -4,7 +4,6 @@ import { Route, Routes } from "react-router-dom";
 import ApodRoute from "./routes/ApodRoute";
 import LoginRoute from "./routes/LoginRoute";
 import SignupRoute from "./routes/SignupRoute";
-import PostNewRoute from "./routes/PostNewRoute";
 
 function App() {
   // const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -15,15 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<LoginRoute />} />
         <Route path="/signup" element={<SignupRoute />} />
-        <Route
-          path="/apod"
-          element={
-            <>
-              <ApodRoute />
-              <PostNewRoute />
-            </>
-          }
-        />
+        <Route path="/apod" element={<ApodRoute />} />
         {/* <Route path="/apod" element={<PostNewRoute />} /> */}
       </Routes>
     </div>
